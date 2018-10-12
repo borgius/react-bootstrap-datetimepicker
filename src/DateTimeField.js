@@ -186,19 +186,19 @@ export default class DateTimeField extends Component {
 
   addMonth = () => {
     return this.setState({
-      viewDate: this.state.viewDate.add(1, "months")
+      viewDate: this.state.viewDate.clone().add(1, "months")
     });
   }
 
   addYear = () => {
     return this.setState({
-      viewDate: this.state.viewDate.add(1, "years")
+      viewDate: this.state.viewDate.clone().add(1, "years")
     });
   }
 
   addDecade = () => {
     return this.setState({
-      viewDate: this.state.viewDate.add(10, "years")
+      viewDate: this.state.viewDate.clone().add(10, "years")
     });
   }
 
@@ -226,19 +226,19 @@ export default class DateTimeField extends Component {
 
   subtractMonth = () => {
     return this.setState({
-      viewDate: this.state.viewDate.subtract(1, "months")
+      viewDate: this.state.viewDate.clone().subtract(1, "months")
     });
   }
 
   subtractYear = () => {
     return this.setState({
-      viewDate: this.state.viewDate.subtract(1, "years")
+      viewDate: this.state.viewDate.clone().subtract(1, "years")
     });
   }
 
   subtractDecade = () => {
     return this.setState({
-      viewDate: this.state.viewDate.subtract(10, "years")
+      viewDate: this.state.viewDate.clone().subtract(10, "years")
     });
   }
 
